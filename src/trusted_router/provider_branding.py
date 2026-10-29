@@ -112,6 +112,13 @@ PROVIDER_BRANDS: dict[str, ProviderBrand] = {
                    ("Data processing agreement", "https://muna.ai/dpa"),
                    ("Service status", "https://status.muna.ai/")),
     ),
+    "negbeta": ProviderBrand(
+        "https://inference.negbeta.com",
+        description="Open-weight models with zero data retention, served in the EU.",
+        resources=(("API documentation", "https://inference.negbeta.com/docs"),
+                   ("Data policy", "https://negbeta.com/inference/data-policy"),
+                   ("Data processing agreement", "https://negbeta.com/inference/dpa")),
+    ),
     "coralbricks": ProviderBrand("https://www.coralbricks.ai/", resources=(
         ("API documentation", "https://www.coralbricks.ai/docs"),
         ("Privacy policy", "https://www.coralbricks.ai/privacy"),

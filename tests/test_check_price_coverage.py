@@ -85,6 +85,8 @@ _NEW_AUTOMATIC_FEED_MODELS = {
     "sakana-ai/fugu-ultra-v1.1",
     "sakana-ai/sakana-namazu-v1.0",
     "dealignai/deepseek-v4.1-flash-1017-uncensored-fp8",
+    "deepseek/deepseek-v4.1-flash-1017",
+    "qwen/qwen3.8-27b",
     "decisionmodelsio/s1-fast",
     "decisionmodelsio-eu/s1-fast",
 }
@@ -118,6 +120,8 @@ def _known_provider_model_payload(url: str, _env_names: tuple[str, ...]) -> dict
         return {"data": [{"id": "greenference/glm-5.3-flash"}]}
     if "api.hixtube.com" in url:
         return {"data": [{"id": "dealignai/deepseek-v4.1-flash-1017-uncensored-fp8"}]}
+    if "inference.negbeta.com" in url:
+        return {"data": [{"id": "deepseek/deepseek-v4.1-flash-1017"}, {"id": "qwen/qwen3.8-27b"}]}
     if "inference.muna.ai" in url:
         return {"data": [{"id": "qwen/qwen-3.8-27b"}, {"id": "google/gemma-4-26b-a4b-it"}]}
     if "inference.coralbricks.ai" in url:

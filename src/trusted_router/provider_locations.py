@@ -67,6 +67,17 @@ PROVIDER_INFERENCE_LOCATIONS = {
         sources=(("Inference catalog", "https://inference.muna.ai/integrations/trustedrouter/catalog"),
                  ("Infrastructure and subprocessors", "https://muna.ai/zdr")),
     ),
+    "negbeta": InferenceLocations(
+        locations=("EU",),
+        scope="EU inference.",
+        routing="Requests are served in the EU.",
+        provider_pinning="EU-only service.",
+        trustedrouter_pinning="Select provider.only=[negbeta] with allow_fallbacks=false.",
+        declaration="EU inference.",
+        evidence="Provider documentation and data policy",
+        reviewed_on="2026-10-29",
+        sources=(("Inference data policy", "https://negbeta.com/inference/data-policy"),),
+    ),
     "nextbit-eu": InferenceLocations(
         locations=("Spain (EU)",),
         scope="The EU API's DPA commits to inference exclusively on NextBit infrastructure in Spain.",

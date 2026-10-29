@@ -2140,6 +2140,17 @@ PROVIDERS: dict[str, Provider] = {
         ),
         provider_policy_url="https://muna.ai/zdr",
     ),
+    "negbeta": Provider(
+        slug="negbeta", name="Negbeta", supports_prepaid=True, supports_byok=False,
+        stores_content=False, provider_zero_data_retention=True,
+        provider_confidential_compute=False, provider_e2ee=False,
+        provider_headquarters_country=PROVIDER_JURISDICTION_GB, renewable_energy_inference=False,
+        provider_policy=(
+            "Zero data retention: prompts and outputs are not stored, logged or used "
+            "for training. Inference runs in the EU."
+        ),
+        provider_policy_url="https://negbeta.com/inference/dpa",
+    ),
     "greenference": Provider(
         slug="greenference",
         name="Greenference",
@@ -2507,6 +2518,7 @@ GATEWAY_PREPAID_PROVIDER_SLUGS = frozenset(
         "greenference",
         "hixtube",
         "muna",
+        "negbeta",
         "coralbricks",
         "boundless",
         "zro",
